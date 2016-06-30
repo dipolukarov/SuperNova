@@ -52,3 +52,4 @@ __*
 /admin/sxd/backup/*.gz
 /admin/sxd/backup/*.bz2
 /admin/sxd/backup/*.sql
+/nbproject/
