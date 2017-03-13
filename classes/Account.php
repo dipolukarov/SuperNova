@@ -52,7 +52,7 @@ class Account {
   public $is_loaded = 0;
 
   /**
-   * @var db_mysql
+   * @var \PDO
    */
   public $db;
 

@@ -20,7 +20,7 @@ class classSupernova {
   /**
    * Основная БД для доступа к данным
    *
-   * @var db_mysql $db
+   * @var \DB $db
    */
   public static $db;
   public static $db_name = '';

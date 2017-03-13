@@ -98,7 +98,7 @@ class auth_local extends auth_abstract {
     $this->manifest['active'] = false;
     if(!empty($this->config) && is_array($this->config['db'])) {
       // БД, отличная от стандартной
-      $this->db = new db_mysql();
+      $this->db = new \DB();
 
       $this->db->sn_db_connect($this->config['db']);
       if($this->manifest['active'] = $this->db->connected) {

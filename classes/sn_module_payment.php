@@ -354,7 +354,7 @@ abstract class sn_module_payment extends sn_module {
   public $account = null;
 
   /**
-   * @var db_mysql $db
+   * @var \DB $db
    */
   public $db = null;
 

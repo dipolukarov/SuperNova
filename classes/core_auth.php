@@ -45,7 +45,7 @@ class core_auth extends sn_module {
   /**
    * БД из которой читать данные
    *
-   * @var db_mysql $db
+   * @var \DB $db
    */
   static $db;
   /**

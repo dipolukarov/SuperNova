@@ -8,7 +8,7 @@
 class Confirmation {
 
   /**
-   * @var db_mysql
+   * @var \DB
    */
   protected $db = null;
 

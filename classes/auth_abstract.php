@@ -26,7 +26,7 @@ class auth_abstract extends sn_module {
   public $account_login_message = '';
 
   /**
-   * @var db_mysql $db
+   * @var \DB $db
    */
   // TODO Should be PROTECTED
   public $db;

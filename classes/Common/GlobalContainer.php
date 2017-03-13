@@ -14,7 +14,7 @@ use \classSupernova;
  * @property \debug               $debug
 // * @property \Common\Types        $types
 // *
- * @property \db_mysql            $db
+ * @property \DB            $db
 // * @property \DbQueryConstructor  $query
 // * @property \DbRowDirectOperator $dbGlobalRowOperator
 // * @property \SnDbCachedOperator  $cacheOperator - really DB record operator. But let it be
@@ -53,7 +53,7 @@ class GlobalContainer extends ContainerPlus {
 
     // Default db
     $gc->db = function (GlobalContainer $c) {
-      classSupernova::$db = new \db_mysql($c);
+      classSupernova::$db = new \DB($c);
 
       return classSupernova::$db;
     };

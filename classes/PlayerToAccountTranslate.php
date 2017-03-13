@@ -13,7 +13,7 @@ class PlayerToAccountTranslate {
   /**
    * БД из которой читать данные
    *
-   * @var db_mysql $db
+   * @var \DB $db
    */
   protected static $db = null;
   protected static $is_init = false;
