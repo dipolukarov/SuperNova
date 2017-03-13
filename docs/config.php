@@ -1,7 +1,7 @@
 <?php
 if(!defined('INSIDE')){ die('attemp hacking'); }
 
-$json = file_get_contentss('settings.json', true);
+$json = file_get_contents('settings.json', true);
 $settings = json_decode($swp);
 
 $dbsettings = $settings->db;
