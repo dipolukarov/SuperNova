@@ -1,0 +1,12 @@
+{
+    "db": {
+        "driver": "pgsql",
+        "host": null,
+        "port": 5432,
+        "dbname": "supernova",
+        "user": "xxx",
+        "pass": "xxx",
+        "schema": "sn.",
+        "secretword": "SUPERNOVA"
+    }
+}
