@@ -1,0 +1,67 @@
+/**
+ * Author:  neo
+ * Created: 10.03.2017
+ */
+
+DROP TABLE IF EXISTS sn.planets;
+CREATE TABLE sn.planets (
+    id              serial,
+    id_owner        bigint,
+    parent_planet   bigint,
+    last_update     timestamptz,
+    body            jsonb NOT NULL,
+CONSTRAINT planets_pkey PRIMARY KEY (id)
+--  KEY `owner_type` (`id_owner`, `planet_type`),
+--  KEY `id_level` (`id_level`),
+--  KEY `i_last_update` (`last_update`),
+--  KEY `GSPT` (`galaxy`, `system`, `planet`, `planet_type`),
+--  KEY `i_parent_planet` (`parent_planet`)
+);
+/*
+    `name`                         VARCHAR(64)          NOT NULL DEFAULT 'Planet',
+    `galaxy`                       SMALLINT(6)          NOT NULL DEFAULT '0',
+    `system`                       SMALLINT(6)          NOT NULL DEFAULT '0',
+    `planet`                       SMALLINT(6)          NOT NULL DEFAULT '0',
+    `planet_type`                  TINYINT(4)           NOT NULL DEFAULT '1',
+    `metal`                        DECIMAL(65, 5)       NOT NULL DEFAULT '0.00000',
+    `crystal`                      DECIMAL(65, 5)       NOT NULL DEFAULT '0.00000',
+    `deuterium`                    DECIMAL(65, 5)       NOT NULL DEFAULT '0.00000',
+    `energy_max`                   DECIMAL(65, 0)       NOT NULL DEFAULT '0',
+    `energy_used`                  DECIMAL(65, 0)       NOT NULL DEFAULT '0',
+    `last_jump_time`               INT(11)              NOT NULL DEFAULT '0',
+    `metal_perhour`                INT(11)              NOT NULL DEFAULT '0',
+    `crystal_perhour`              INT(11)              NOT NULL DEFAULT '0',
+    `deuterium_perhour`            INT(11)              NOT NULL DEFAULT '0',
+    `metal_mine_porcent`           TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10',
+    `crystal_mine_porcent`         TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10',
+    `deuterium_sintetizer_porcent` TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10',
+    `solar_plant_porcent`          TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10',
+    `fusion_plant_porcent`         TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10',
+    `solar_satelit_porcent`        TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10',
+    `que_processed`                INT(11) UNSIGNED     NOT NULL DEFAULT '0',
+    `image`                        VARCHAR(64)          NOT NULL DEFAULT 'normaltempplanet01',
+    `points`                       BIGINT(20)                    DEFAULT '0',
+    `ranks`                        BIGINT(20)                    DEFAULT '0',
+    `id_level`                     TINYINT(4)           NOT NULL DEFAULT '0',
+    `destruyed`                    INT(11)              NOT NULL DEFAULT '0',
+    `diameter`                     INT(11)              NOT NULL DEFAULT '12800',
+    `field_max`                    SMALLINT(5) UNSIGNED NOT NULL DEFAULT '163',
+    `field_current`                SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0',
+    `temp_min`                     SMALLINT(6)          NOT NULL DEFAULT '0',
+    `temp_max`                     SMALLINT(6)          NOT NULL DEFAULT '40',
+    `metal_max`                    DECIMAL(65, 0)                DEFAULT '100000',
+    `crystal_max`                  DECIMAL(65, 0)                DEFAULT '100000',
+    `deuterium_max`                DECIMAL(65, 0)                DEFAULT '100000',
+    `debris_metal`                 BIGINT(20) UNSIGNED           DEFAULT '0',
+    `debris_crystal`               BIGINT(20) UNSIGNED           DEFAULT '0',
+    `PLANET_GOVERNOR_ID`           SMALLINT(6)          NOT NULL DEFAULT '0',
+    `PLANET_GOVERNOR_LEVEL`        SMALLINT(6)          NOT NULL DEFAULT '0',
+    `planet_teleport_next`         INT(11)              NOT NULL DEFAULT '0' COMMENT 'Next teleport time',
+    `ship_sattelite_sloth_porcent` TINYINT(3) UNSIGNED  NOT NULL DEFAULT '10' COMMENT 'Terran Sloth production',
+    `density`                      SMALLINT(6)          NOT NULL DEFAULT '5500' COMMENT 'Planet average density kg/m3',
+    `density_index`                TINYINT(4)           NOT NULL DEFAULT '4' COMMENT 'Planet cached density index',
+    `position_original`            SMALLINT(6)          NOT NULL DEFAULT '0',
+    `field_max_original`           SMALLINT(6)          NOT NULL DEFAULT '0',
+    `temp_min_original`            SMALLINT(6)          NOT NULL DEFAULT '0',
+    `temp_max_original`            SMALLINT(6)          NOT NULL DEFAULT '0',
+*/
