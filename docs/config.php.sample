@@ -1,14 +1,9 @@
 <?php
-if(!defined("INSIDE")){ die("attemp hacking"); }
+if(!defined('INSIDE')){ die('attemp hacking'); }
 
-$dbsettings = array(
-  'sn_driver'  => 'db_mysql_v5',    // db_mysql_v5 - MySQLi, db_mysql_v4 - простой MySQL. Можно написать свой драйвер
-  "server"     => "localhost",      // MySQL сервер.
-  "user"       => "supernova_user", // Логин доступа MySQL сервера.
-  "pass"       => "MYSQL_PASSWORD", // Пароль доступа MySQL сервера.
-  "name"       => "supernova",      // Название MySQL базы.
-  "prefix"     => "sn_",            // Префикс для таблиц в базе и для xCache. ИСПОЛЬЗУЙТЕ РАЗНЫЕ ПРЕФИКСЫ, ЕСЛИ НА ОДНОМ СЕРВЕРЕ РАБОТАЕТ НЕСКОЛЬКО КОПИЙ SN!!!
-  "secretword" => "SUPERNOVA",      // Ключевое слово для создания Cookies. (Не забудьте изменить на своё!)
-);
+$json = file_get_contents('settings.json');
+$settings = json_decode($swp);
 
-$game['prefix'] = $dbsettings['prefix'];
+$dbsettings = $settings->db;
+
+$game['prefix'] = $dbsettings->schema;
